@@ -1,0 +1,30 @@
+# EZCryptoExchange Configuration
+price_refresh_seconds: 15
+price_provider: "coingecko"
+trading:
+  fee_percent: 0.25
+  spread_percent: 0.10
+  cooldown_ms: 1500
+  min_usd: 1.00
+  min_asset_amounts:
+    BTC: "0.00000100"
+    ETH: "0.00001000"
+    SOL: "0.00010000"
+  max_open_orders_per_player: 25
+limit_check_interval_seconds: 5
+quick_buy_amounts:
+  - 10
+  - 50
+  - 100
+  - 500
+input_timeout_seconds: 30
+sounds:
+  trade_success: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  trade_fail: "ENTITY_VILLAGER_NO"
+  order_placed: "BLOCK_NOTE_BLOCK_PLING"
+  order_cancelled: "BLOCK_NOTE_BLOCK_BASS"
+  order_filled: "ENTITY_PLAYER_LEVELUP"
+  gui_open: "BLOCK_CHEST_OPEN"
+  gui_click: ""
+currency_format: "#,##0.00"
+crypto_format: "0.00000000"
