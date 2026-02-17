@@ -43,7 +43,7 @@ public final class VaultHook {
         }
         EconomyResponse response = economy.withdrawPlayer(player, amount.doubleValue());
         if (response.type == EconomyResponse.ResponseType.SUCCESS) {
-            return TransactionResult.success();
+            return TransactionResult.ok();
         }
         if (response.type == EconomyResponse.ResponseType.FAILURE && response.errorMessage != null && response.errorMessage.toLowerCase().contains("insufficient")) {
             return TransactionResult.insufficient(response.errorMessage);
@@ -57,7 +57,7 @@ public final class VaultHook {
         }
         EconomyResponse response = economy.depositPlayer(player, amount.doubleValue());
         if (response.type == EconomyResponse.ResponseType.SUCCESS) {
-            return TransactionResult.success();
+            return TransactionResult.ok();
         }
         return TransactionResult.failed(response.errorMessage == null ? "Failed" : response.errorMessage);
     }

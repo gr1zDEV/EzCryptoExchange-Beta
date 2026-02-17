@@ -7,7 +7,7 @@ public record TransactionResult(boolean success, Reason reason, String message) 
         FAILED
     }
 
-    public static TransactionResult success() {
+    public static TransactionResult ok() {
         return new TransactionResult(true, Reason.SUCCESS, "");
     }
 
