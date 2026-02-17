@@ -1,0 +1,20 @@
+name: EZCryptoExchange
+version: '${project.version}'
+main: org.ezinnovations.ezcryptoexchange.EZCryptoExchange
+api-version: '1.21'
+author: EZInnovations
+description: A simulated cryptocurrency exchange with full GUI trading
+softdepend:
+  - Vault
+commands:
+  crypto:
+    description: Open the crypto exchange
+    usage: /<command> [wallet|orders|reload]
+    permission: ezcrypto.use
+permissions:
+  ezcrypto.use:
+    description: Allows using the crypto exchange
+    default: true
+  ezcrypto.admin:
+    description: Allows reloading the plugin
+    default: op
